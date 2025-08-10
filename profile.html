@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Student Market Hub Deals</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<!-- Profile Popup -->
+<div id="profilePopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Profile Menu</h2>
+    <ul>
+      <li><a href="profile.html">View Profile</a></li>
+      <li><a href="market-login.html" onclick="signOut()">Sign Out</a></li>
+    </ul>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+ <script>
+    // Show popup on page load
+    window.onload = function () {
+      document.getElementById("welcomePopup").style.display = "flex";
+};
+
+    // Close popup
+    function closePopup() {
+      document.getElementById("welcomePopup").style.display = "none";
+}
+  </script>
+</html>

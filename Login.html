@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0" />
+<title> 
+	Market Hub
+</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="content">
+<div class="login-container">
+
+
+	<h2>STUDENT MARKET HUB</h2>
+	<form>
+	⁬<input type ="text" placeholder="INDEX NUMBER" required minlength="10">
+	<input type="password" id = "passwordInput" placeholder="Password" required minlength="8">
+	<button id="loginBtn" type="submit">LogIn</button>
+	<div id="message"></div>
+	</form>
+    </div>
+    <script> 
+const correctPassword= "letmein123";
+document.getElementById("loginBtn").addEventListener("click", function(e) {
+  e.preventDefault(); // Prevent form submission for now
+  // You can add your validation logic here if needed
+
+  // Redirect after validation
+  window.location.href = "MARKETHUB.html";
+});	
+
+function checkPassword() {
+  const input = document.getElementById("passwordInput").value;
+  const message = document.getElementById("message");
+
+  if (input === correctPassword) {
+    message.textContent = "Correct Password";
+    message.style.color = "green";
+    setTimeout(() => window.location.href = "MARKETHUB.html", 1000);
+} else {
+    message.textContent = "Wrong Password";
+    message.style.color = "red";
+    setTimeout(() => message.textContent = "", 3000);
+}
+}
+
+</script>
+</body>
+
+</html>
